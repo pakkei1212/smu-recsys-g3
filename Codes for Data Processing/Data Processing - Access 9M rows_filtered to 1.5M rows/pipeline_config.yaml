@@ -1,0 +1,7 @@
+load_reviews: false
+compute_top50: false
+filter_reviews: false
+load_metadata: false
+join_reviews_metadata: true
+chunk_split: true
+final_merge: true

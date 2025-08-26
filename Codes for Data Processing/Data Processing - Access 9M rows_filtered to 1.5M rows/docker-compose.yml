@@ -1,0 +1,19 @@
+services:
+  chunk_merger:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: chunk_merger_container
+    volumes:
+      - .:/app
+      - /c/Users/dolly/Desktop/sports-collection-recommender/data/processed:/data
+    working_dir: /app
+    environment:
+      - PYSPARK_DRIVER_MEMORY=6g
+    command: >
+      python scripts/merge_parquet_chunks.py
+      --temp-dir /data/Temporary_Chunks_Meta_Sports_and_Outdoors
+      --output /data/Meta_Sports_and_Outdoors.parquet
+      --partitions 5
+      --memory 6g
+      --verbose
