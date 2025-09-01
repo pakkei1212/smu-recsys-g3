@@ -205,3 +205,24 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# -----------------------------------------------------------------
+# Project-specific ignores for data files
+# -----------------------------------------------------------------
+# Ignore raw and processed data files
+data/
+*.csv
+*.tsv
+*.parquet
+*.pkl
+*.pickle
+*.feather
+*.h5
+*.xls
+*.xlsx
+*.json
+*.zip
+*.gz
+*.bz2
+*.tar
+*.rar

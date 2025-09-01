@@ -6,7 +6,7 @@ services:
     container_name: chunk_merger_container
     volumes:
       - .:/app
-      - /c/Users/dolly/Desktop/sports-collection-recommender/data/processed:/data
+      - ../../data/processed:/data
     working_dir: /app
     environment:
       - PYSPARK_DRIVER_MEMORY=6g
